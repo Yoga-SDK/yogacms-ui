@@ -97,8 +97,8 @@ class MenuBuilder
      */
     function on($name)
     {
-        $sectionSlug = Str::slug($name);
-        return $this->sections[$sectionSlug]->clearContext();
+        $slug = Str::slug($name);
+        return isset($this->sections[$slug]) ? $this->sections[$slug]->clearContext() : $this;
     }
 
     /**

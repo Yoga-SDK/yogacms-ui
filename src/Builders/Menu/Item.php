@@ -136,7 +136,7 @@ class Item
     public function on($name)
     {
         $slug = Str::slug($name);
-        return $this->children[$slug]->clearContext();
+        return isset($this->children[$slug]) ? $this->children[$slug]->clearContext() : $this;
     }
 
     /**
