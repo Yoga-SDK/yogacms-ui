@@ -33,19 +33,19 @@ class UI extends Extension
         $builder = Settings::__init__();
         $builder->addItem('Autenticação & Autorização');
 
-        $builder->on('autenticacao-and-autorizacao')->addItem('Níveis de acesso', [
+        $builder->on('Autenticação & Autorização')->addItem('Níveis de acesso', [
             'icon' => 'fa-users',
             'description' => 'Níveis de acesso do sistema',
             'url' => 'auth/roles'
         ]);
 
-        $builder->on('autenticacao-and-autorizacao')->addItem('Permissões', [
+        $builder->on('Autenticação & Autorização')->addItem('Permissões', [
             'icon' => 'fa-key',
             'description' => 'Permissões dos níveis de acesso dentro do sistema',
             'url' => 'auth/permissions'
         ]);
 
-        $builder->on('autenticacao-and-autorizacao')->addItem('Usuários', [
+        $builder->on('Autenticação & Autorização')->addItem('Usuários', [
             'icon' => 'fa-user',
             'description' => 'Usuários com acesso ao painel administrativo',
             'url' => 'auth/users'
@@ -62,16 +62,16 @@ class UI extends Extension
 
         $builder->addItem('Plugins');
 
-        $builder->on('plugins')->addItem('Localização', [
+        $builder->on('Plugins')->addItem('Localização', [
             'icon' => 'map-outline'
         ]);
         
-        $builder->on('plugins')->on('localizacao')->addItem('Estados', [
+        $builder->on('Plugins')->on('Localização')->addItem('Estados', [
             'url' => 'estados',
             'activeLink' => 'admin/estados*'
         ]);
 
-        $builder->on('plugins')->on('localizacao')->addItem('Cidades', [
+        $builder->on('Plugins')->on('Localização')->addItem('Cidades', [
             'url' => 'cidades',
             'activeLink' => 'admin/cidades*'
         ]);

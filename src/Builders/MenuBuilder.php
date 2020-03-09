@@ -95,8 +95,9 @@ class MenuBuilder
      * Select a Sidebar Section
      *
      */
-    function on($sectionSlug)
+    function on($name)
     {
+        $sectionSlug = Str::slug($name);
         return $this->sections[$sectionSlug]->clearContext();
     }
 

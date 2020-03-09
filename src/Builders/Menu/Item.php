@@ -133,8 +133,9 @@ class Item
      * Add a Item to Context
      *
      */
-    public function on($slug)
+    public function on($name)
     {
+        $slug = Str::slug($name);
         return $this->children[$slug]->clearContext();
     }
 
